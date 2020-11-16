@@ -1,0 +1,22 @@
+server:
+    port: 8081
+
+# DataSource Config
+spring:
+  datasource:
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    url: jdbc:mysql://localhost:3306/db_second_kill_03?useUnicode=true&useSSL=false&characterEncoding=utf8&serverTimezone=Asia/Shanghai
+    username: root
+    password: root
+
+  redis:
+    host: 127.0.0.1
+    port: 6379
+    timeout: 3
+    password: 123456
+    poolMaxTotal: 1000
+    poolMaxIdle: 1000
+    poolMaxWait: 500
+
+mybatis-plus:
+  mapper-locations: classpath*:/mapper/**Mapper.xml
